@@ -18,8 +18,8 @@ export default {
   data() {
 		return {
 			items: [
-                {label: 'Overview', icon: 'pi pi-fw pi-home', to: `/event/${this.$route.params.id}/overview`},
-                {label: 'Settings', icon: 'pi pi-fw pi-cog', to: `/event/${this.$route.params.id}/settings`}
+                {label: 'Overview', icon: 'pi pi-fw pi-home', command: () => this.$router.push(`/event/${this.$route.params.id}`)},
+                {label: 'Settings', icon: 'pi pi-fw pi-cog', command: () => this.$router.push(`/event/${this.$route.params.id}/settings`)}
             ]
 		}
 	}
