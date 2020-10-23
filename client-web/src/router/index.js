@@ -10,11 +10,19 @@ const routes = [
     ]
   },
   {
+    path: '/event/:id',
+    name: 'Event',
+    component: () => import(/* webpackChunkName: "layoutBasic" */ '../layouts/LayoutBasic.vue'),
+    children: [
+      { path: '', component: () => import(/* webpackChunkName: "viewEvent" */ '../views/ViewEvent.vue') }
+    ]
+  },
+  {
     path: '/dashboard',
     name: 'Dashboard',
     component: () => import(/* webpackChunkName: "layoutMain" */ '../layouts/LayoutMain.vue'),
     children: [
-      { path: '', component: () => import(/* webpackChunkName: "viewHome" */ '../views/ViewDashboard.vue') }
+      { path: '', component: () => import(/* webpackChunkName: "viewDashboard" */ '../views/ViewDashboard.vue') }
     ]
   },
   {
@@ -22,7 +30,7 @@ const routes = [
     name: 'Login',
     component: () => import(/* webpackChunkName: "layoutBasic" */ '../layouts/LayoutBasic.vue'),
     children: [
-      { path: '', component: () => import(/* webpackChunkName: "viewHome" */ '../views/ViewLogin.vue') }
+      { path: '', component: () => import(/* webpackChunkName: "viewLogin" */ '../views/ViewLogin.vue') }
     ]
   }
 ]
