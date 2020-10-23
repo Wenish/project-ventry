@@ -1,10 +1,12 @@
 <template>
-  <div>
-    <router-view/>
-  </div>
+  <router-view/>
 </template>
 
 <style lang="stylus">
+#app {
+  height: 100%;
+}
+
 html, body {
   height: 100%
   margin: 0

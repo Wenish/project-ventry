@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <AppTopbar />
-    <AppSidebar />
-    <div class="content-container">
-      <AppContent />
-    </div>
+<div class="layout">
+  <AppTopbar />
+  <AppSidebar />
+  <div class="content-container">
+    <AppContent />
   </div>
+</div>
 </template>
 
 <script>
@@ -25,8 +25,13 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.layout {
+    height 100%
+}
+
 .content-container {
     padding-top: 70px;
     margin-left: 250px;
+    height 100%
 }
 </style>

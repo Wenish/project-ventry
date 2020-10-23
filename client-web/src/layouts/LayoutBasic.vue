@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="layout">
     <AppTopbar />
     <div class="content-container">
       <AppContent />
@@ -22,7 +22,12 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.layout {
+    height 100%
+}
+
 .content-container {
     padding-top: 70px;
+    height 100%
 }
 </style>
