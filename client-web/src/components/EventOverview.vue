@@ -1,5 +1,5 @@
 <template>
   <div>
-      EventHome
+      EventOverview
   </div>
 </template>

@@ -19,8 +19,8 @@ const routes = [
         component: () => import(/* webpackChunkName: "viewEvent" */ '../views/ViewEvent.vue'),
         children: [
           {
-            path: 'home',
-            component: () => import(/* webpackChunkName: "eventHome" */ '../components/EventHome.vue')
+            path: 'overview',
+            component: () => import(/* webpackChunkName: "eventOverview" */ '../components/EventOverview.vue')
           },
           {
             path: 'settings',
