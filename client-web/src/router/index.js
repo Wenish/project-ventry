@@ -10,11 +10,24 @@ const routes = [
     ]
   },
   {
-    path: '/event/:id',
+    path: '/event',
     name: 'Event',
     component: () => import(/* webpackChunkName: "layoutBasic" */ '../layouts/LayoutBasic.vue'),
     children: [
-      { path: '', component: () => import(/* webpackChunkName: "viewEvent" */ '../views/ViewEvent.vue') }
+      {
+        path: ':id',
+        component: () => import(/* webpackChunkName: "viewEvent" */ '../views/ViewEvent.vue'),
+        children: [
+          {
+            path: 'home',
+            component: () => import(/* webpackChunkName: "eventHome" */ '../components/EventHome.vue')
+          },
+          {
+            path: 'settings',
+            component: () => import(/* webpackChunkName: "eventSettings" */ '../components/EventSettings.vue')
+          }
+        ]
+      }
     ]
   },
   {
