@@ -10,12 +10,12 @@ const routes = [
     ]
   },
   {
-    path: '/event',
+    path: '/event/:id',
     name: 'Event',
     component: () => import(/* webpackChunkName: "layoutBasic" */ '../layouts/LayoutBasic.vue'),
     children: [
       {
-        path: ':id',
+        path: '',
         component: () => import(/* webpackChunkName: "viewEvent" */ '../views/ViewEvent.vue'),
         children: [
           {
@@ -36,6 +36,14 @@ const routes = [
     component: () => import(/* webpackChunkName: "layoutMain" */ '../layouts/LayoutMain.vue'),
     children: [
       { path: '', component: () => import(/* webpackChunkName: "viewDashboard" */ '../views/ViewDashboard.vue') }
+    ]
+  },
+  {
+    path: '/new/event',
+    name: 'NewEvent',
+    component: () => import(/* webpackChunkName: "layoutBasic" */ '../layouts/LayoutBasic.vue'),
+    children: [
+      { path: '', component: () => import(/* webpackChunkName: "viewNewEvent" */ '../views/ViewNewEvent.vue') }
     ]
   },
   {

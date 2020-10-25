@@ -1,6 +1,6 @@
 <template>
   <div>
     ViewLogin
-    <PrimeButton label="Home"  @click="$router.push('/')" />
+    <PrimeButton label="Home" @click="$router.push('/')" />
   </div>
 </template>

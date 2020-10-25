@@ -3,7 +3,7 @@
     <h2>ViewEvent {{ $route.params.id }}</h2>
     <TabMenu :model="items" />
     <router-view />
-    <PrimeButton label="Dashboard"  @click="$router.push('/dashboard')" />
+    <PrimeButton label="Dashboard" @click="$router.push('/dashboard')" />
   </div>
 </template>
 

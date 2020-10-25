@@ -2,7 +2,7 @@
   <div class="sidebar">
       <div class="heading">
         <div>Events</div>
-        <PrimeButton label="New" icon="pi pi-calendar" class="p-button-sm" />
+        <PrimeButton label="New" icon="pi pi-calendar" class="p-button-sm" @click="$router.push('/new/event')" />
       </div>
       <Menu :model="items" />
   </div>

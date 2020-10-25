@@ -3,7 +3,7 @@
     ViewHome
     <img alt="Vue logo" src="../assets/logo.png">
     <PrimeButton label="Login"  @click="$router.push('/login')" />
-    <PrimeButton label="Dashboard"  @click="$router.push('/dashboard')" />
+    <PrimeButton label="Dashboard" @click="$router.push('/dashboard')" />
   </div>
 </template>
 
